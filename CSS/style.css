@@ -51,7 +51,7 @@ nav ul li {
 
 #myMenu li:hover {
     list-style: none;
-    text-decoration: underline;
+    text-decoration: none;
     background-color: #686868;
 }
 
