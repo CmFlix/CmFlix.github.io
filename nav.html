@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Recherche</title>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <h1 class="center">CM-Flix</h1>
+            <li>
+                <a href="index.html" class="search">
+                    <img src="IMG/home.png" class="search">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div style="background-color: #191919;">
+        <br><br>
+        <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Rechercher sur CM-Flix (veiller à ne pas mettre d'accent)" title="Recherche" style="color: black;">
+
+            <ul id="myMenu">
+                <li><a href="films/marvel/choix.html">Ant-Man (2 films)</a></li>
+                
+                <li><a href="films/marvel/choix.html">Doctor Strange (2 films)</a></li>
+                
+                <li><a href="films/marvel/choix.html">Spider Man (1 film)</a></li>
+            </ul>
+            <br>
+    </div>
+
+    <br><br><br>
+
+    <div class="center">
+        <p>Copyright &copy; 2022 CM-Flix - Tous droits réservés</p>
+        <p>CM-Flix n'héberge en aucun cas les films et séries proposé<br> et se délaisse de toute responsabilité par rapport a ces programmes.</p>
+    </div>
+
+    <script>
+
+        // var myFunction;
+        function myFunction(){
+            var input,filter,ul,li,a,i;
+            input = document.getElementById("mySearch");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myMenu");
+            li = ul.getElementsByTagName("li");
+            for(i=0;i<li.length;i++){
+                a = li[i].getElementsByTagName("a")[0];
+                if(a.innerHTML.toUpperCase().indexOf(filter)>-1){
+                    li[i].style.display="";
+                }
+                else{
+                    li[i].style.display="none";
+                }
+            }
+        }
+        function pani(){
+            var a,b,c;
+            a=5;
+            b=5;
+            c=a+b;
+        }
+
+    </script>
+</body>
+</html>
