@@ -28,6 +28,7 @@ nav ul li {
 
 *.center {
     text-align: center;
+    font-weight: bold;
 }
 
 #mySearch {
